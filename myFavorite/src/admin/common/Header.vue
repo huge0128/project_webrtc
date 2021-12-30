@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class="logo">管理</div>
+        <div class="logo">网络测试管理</div>
         <div class="user-info">
             <el-dropdown trigger="click" @command="handleCommand">
                 <span class="el-dropdown-link">

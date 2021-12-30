@@ -24,6 +24,10 @@ export default new Router({
                 {
                     path: '/favorite_admin',
                     component: resolve => require(['../admin/page/favorite_admin.vue'], resolve)
+                },
+                {
+                    path: '/speed_admin',
+                    component: resolve => require(['../admin/page/speed_admin.vue'], resolve)
                 }
             ]
         }

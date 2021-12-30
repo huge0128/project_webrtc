@@ -4,7 +4,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 #数据库连接
-db = pymysql.connect("127.0.0.1","root","123456","myfavorite")
+#db = pymysql.connect("127.0.0.1","root","123456","myfavorite")
+db = pymysql.connect(host="127.0.0.1",user="root",password="123456",db="myfavorite")
 cursor = db.cursor()
 
 #后端服务启动
@@ -208,6 +209,37 @@ def favorite_count():
             print("count failed:",e)
             db.rollback() #发生错误就回滚
             return "-1"
+
+@app.route('/speed/list', methods=['POST'])
+def speed_list():
+    if request.method == "POST":
+        # role = request.form.get("role")
+        cursor.execute("select role,usrname,usripaddress,ctime,bandwidth,jitter,delay from speed ")
+        # cursor.execute("select role,usrname,usripaddress,ctime,bandwidth,jitter,delay from speed "
+        #                + "where role=" + str(role))
+        # if(role == 0): #查询全部公开的收藏数据
+        #     cursor.execute("select role,usrname,usripaddress,ctime,bandwidth,jitter,delay from speed ")
+        # else:
+        #     cursor.execute("select role,usrname,usripaddress,ctime,bandwidth,jitter,delay from speed "
+        #                    +"where role="+str(role))
+        data = cursor.fetchall()
+        temp={}
+        result=[]
+        if(data!=None):
+            for i in data:
+                temp["role"]=i[0]
+                temp["usrname"]=i[1]
+                temp["usripaddress"]=i[2]
+                temp["ctime"]=i[3]
+                temp["bandwidth"]=i[4]
+                temp["jitter"]=i[5]
+                temp["delay"]=i[6]
+                result.append(temp.copy()) #特别注意要用copy，否则只是内存的引用
+            print("result:",len(data))
+            return jsonify(result)
+        else:
+            print("result: NULL")
+            return jsonify([])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=9090)

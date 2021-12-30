@@ -34,6 +34,11 @@
                             icon: 'el-icon-setting',
                             index: 'favorite_admin',
                             title: '收藏管理',
+                        },
+                        {
+                            icon: 'el-icon-setting',
+                            index: 'speed_admin',
+                            title: '会议管理',
                         }
                     ]
             }
@@ -55,7 +60,7 @@
     .sidebar{
         display: block;
         position: absolute;
-        width: 250px;
+        width: 200px;
         left: 0;
         top: 70px;
         bottom:0;
