@@ -39,6 +39,16 @@
                             icon: 'el-icon-setting',
                             index: 'speed_admin',
                             title: '会议管理',
+                        },
+                        {
+                            icon: 'el-icon-setting',
+                            index: 'getstats',
+                            title: '网络状态',
+                        },
+                        {
+                            icon: 'el-icon-setting',
+                            index: 'main',
+                            title: '网络会议',
                         }
                     ]
             }

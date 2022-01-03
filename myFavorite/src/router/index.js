@@ -28,6 +28,14 @@ export default new Router({
                 {
                     path: '/speed_admin',
                     component: resolve => require(['../admin/page/speed_admin.vue'], resolve)
+                },
+                {
+                    path: '/getstats',
+                    component: resolve => require(['../admin/page/getstats.vue'], resolve)
+                },
+                {
+                    path: '/main',
+                    component: resolve => require(['../admin/page/main.vue'], resolve)
                 }
             ]
         }
