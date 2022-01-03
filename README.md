@@ -8,7 +8,7 @@ webrtc会议系统项目的网络质量测量
 
 2.在右侧会出现一个填写git项目的地址的输入框，填写完成后回车就会打开电脑的文件库，然后自己找地方放这个项目就可以了，选择玩成后，vscode就会自动的进行下载操作啦。  
 
-3.在完成了代码修改后可以更新到GitHub上
-$| git add xxx          //写出的修改文件
-$| git commit -m "xxx"  //写明修改的部分
+3.在完成了代码修改后可以更新到GitHub上  
+$| git add xxx          //写出的修改文件  
+$| git commit -m "xxx"  //写明修改的部分  
 $| git push -u origin main //上传到GitHub
