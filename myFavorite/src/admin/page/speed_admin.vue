@@ -3,7 +3,7 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item><i class="el-icon-setting"></i> 管理</el-breadcrumb-item>
-                <el-breadcrumb-item>会议室列表测试</el-breadcrumb-item>
+                <el-breadcrumb-item>会议室列表测试实验室</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div>
